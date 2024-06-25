@@ -1,5 +1,5 @@
 fetch('https://quotes.ceedbox.io/')
 .then(data => {
-    let data = document.getElementById("motivation")
-    console.log(data)
+    document.getElementById("motivation").innerText(data.text)
+    console.log(data.text)
 }) 
