@@ -1,5 +1,4 @@
-fetch('https://quotes.ceedbox.io/')
+fetch('https://quotes.ceedbox.io/', { mode: 'no-cors'})
 .then(data => {
-    document.getElementById("motivation").innerText(data.text)
-    console.log(data.text)
+    console.log(data);
 }) 
