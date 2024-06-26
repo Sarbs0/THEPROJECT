@@ -10,27 +10,55 @@
 </head>
 <body>
     <button id="sendJsonButton">Send JSON</button>
+    <button id="randomizeButton">Randomize User Information</button>
 
+    <li>
+        <p id = "name">Name: </p>
+        <p id = "email">Email: </p>
+        <p id = "username">Username: </p>
+    </li>
 
     <script>
 
-        $.ajax({
+        let nameEl = document.getElementById('name');
+        let emailEl = document.getElementById('email');
+        let userEl = document.getElementById('username');
+
+
+
+        function randomizeData(data){
+
+            let results = data.results
+            let name = results[0].name.first + " " + results[0].name.last
+            let email = results[0].email
+            let userName = results[0].login.username
+            
+            nameEl.innerText = name
+            emailEl.innerText = email
+            userEl.innerText = userName
+            
+        }
+
+        document.getElementById('randomizeButton').addEventListener('click', function() {
+
+            $.ajax({
             url: 'https://randomuser.me/api/?inc=name,email,login&noinfo',
             dataType: 'json',
             success: function(data) {
-            console.log("result:", data)}
+                console.log(data);
+                console.log(typeof(data));
+                randomizeData(data);
+            }
         });    
-        
-        let nameEl = document.getElementById('name');
-        let emailEl = document.getElementById('email');
-        let msgEl = document.getElementById('message');
 
+        });
+        
         document.getElementById('sendJsonButton').addEventListener('click', function() {
             // Define the JSON data
             const jsonData = {
-                "name": nameEl.value,
-                "email": emailEl.value,
-                "message": msgEl.value
+                "name": nameEl.innerText,
+                "email": emailEl.innerText,
+                "message": userEl.innerText
             };
             
             // Define the webhook URL
@@ -48,7 +76,7 @@
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
-                        alert('JSON sent successfully!');
+                        //alert('JSON sent successfully!');
                     } else {
                         alert('Error sending JSON: ' + xhr.statusText);
                     }
