@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Send JSON to Webhook</title>
 </head>
 <body>
-    
+    <button id="sendJsonButton">Send JSON</button>
+
+    <script>
+        document.getElementById('sendJsonButton').addEventListener('click', function() {
+            // Define the JSON data
+            const jsonData = {
+                "name": "John Doe",
+                "email": "john.doe@example.com",
+                "message": "Hello, this is a test message."
+            };
+
+            // Define the webhook URL
+            const webhookUrl = 'https://hook.integromat.com/your-webhook-url';
+
+            // Create a new XMLHttpRequest object
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", webhookUrl, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            // Send the JSON data
+            xhr.send(JSON.stringify(jsonData));
+
+            // Handle the response (optional)
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        alert('JSON sent successfully!');
+                    } else {
+                        alert('Error sending JSON: ' + xhr.statusText);
+                    }
+                }
+            };
+        });
+    </script>
 </body>
 </html>
