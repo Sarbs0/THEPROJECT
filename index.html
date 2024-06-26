@@ -8,13 +8,27 @@
 <body>
     <button id="sendJsonButton">Send JSON</button>
 
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email">
+        <label for="msg">Message:</label><br>
+        <input type="text" id="message" name="message">
+    </form>
+
     <script>
+
+        let nameEl = document.getElementById('name')
+        let emailEl = document.getElementById('email')
+        let msgEl = document.getElementById('message')
+
         document.getElementById('sendJsonButton').addEventListener('click', function() {
             // Define the JSON data
             const jsonData = {
-                "name": "John Doe",
-                "email": "john.doe@example.com",
-                "message": "Hello, this is a test message."
+                "name": nameEl.textContent,
+                "email": emailEl.textContent,
+                "message": msgEl.textContent
             };
 
             // Define the webhook URL
