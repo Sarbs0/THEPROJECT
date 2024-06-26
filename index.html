@@ -19,18 +19,18 @@
 
     <script>
 
-        let nameEl = document.getElementById('name')
-        let emailEl = document.getElementById('email')
-        let msgEl = document.getElementById('message')
+        let nameEl = document.getElementById('name');
+        let emailEl = document.getElementById('email');
+        let msgEl = document.getElementById('message');
 
         document.getElementById('sendJsonButton').addEventListener('click', function() {
             // Define the JSON data
             const jsonData = {
-                "name": nameEl.textContent,
-                "email": emailEl.textContent,
-                "message": msgEl.textContent
+                "name": nameEl.value,
+                "email": emailEl.value,
+                "message": msgEl.value
             };
-
+            
             // Define the webhook URL
             const webhookUrl = 'https://hook.eu2.make.com/p1r8aa6ukox9mg2qenbscyc878qwrxk5';
 
