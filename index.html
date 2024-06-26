@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send JSON to Webhook</title>
+    <script src=
+    "https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
 </head>
 <body>
     <button id="sendJsonButton">Send JSON</button>
 
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email">
-        <label for="msg">Message:</label><br>
-        <input type="text" id="message" name="message">
-    </form>
 
     <script>
 
+        $.ajax({
+            url: 'https://randomuser.me/api/?inc=name,email,login&noinfo',
+            dataType: 'json',
+            success: function(data) {
+            console.log("result:", data)}
+        });    
+        
         let nameEl = document.getElementById('name');
         let emailEl = document.getElementById('email');
         let msgEl = document.getElementById('message');
