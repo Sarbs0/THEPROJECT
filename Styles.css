@@ -1,0 +1,177 @@
+/* CSS */
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.button-54:hover {
+    box-shadow: 3px 3px 1px 1px, 4px 4px 1px 1px, 5px 5px 1px 1px, 6px 6px 1px 1px, 7px 7px 1px 1px;
+    transform: translate(-2px, -2px);
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.header-1 { 
+    background-color: blanchedalmond;
+    background: blanchedalmond;
+    height: 100px;
+    width: 90%;
+    padding: 50px;
+    align-content: center;
+    text-align: center;
+   
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* background-color: #f7f7f7; */
+    background: rgb(128,0,94);
+    background: linear-gradient(90deg, rgba(128,0,94,1) 10%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 90%, rgba(128,0,94,1) 90%);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: row;
+}
+
+div {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 4px 4px 0 #000000;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Adding some minimalist hover effect */
+div:hover {
+    box-shadow: 6px 6px 0 #000000;
+}   
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    div {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 3px 3px 0 #000000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+/* Adding some minimalist hover effect */
+li:hover {
+    box-shadow: 5px 5px 0 #000000;
+    transform: translate(-2px, -2px);
+}
+
+/* Adding a comic-style icon */
+li::before {
+    content: '\1F4AC'; /* Unicode for a speech balloon icon */
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    li {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+.button-container {
+    background-color: blanchedalmond;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 100px;
+    box-shadow: 4px 4px 0 #000000;
+    width: fit-content;
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.status {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 3px 3px 0 #000000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.status:hover {
+    box-shadow: 5px 5px 0 #000000;
+    transform: translate(0px, 0px);
+}
+
+@media (max-width: 600px) {
+    .status {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+.status:before {
+    content: '\23'; /* Unicode for a speech balloon icon */
+    font-size: 24px;
+    margin-right: 10px;
+}
