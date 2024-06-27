@@ -7,6 +7,7 @@
     <script src=
     "https://code.jquery.com/jquery-3.6.0.min.js">
     </script>
+    
 </head>
 <body>
     <button id="sendJsonButton">Send JSON</button>
@@ -18,13 +19,13 @@
         <p id = "username">Username: </p>
     </li>
 
+    <button id="loadProducts">Load products to sheet</button>
+
     <script>
 
         let nameEl = document.getElementById('name');
         let emailEl = document.getElementById('email');
         let userEl = document.getElementById('username');
-
-
 
         function randomizeData(data){
 
@@ -84,5 +85,7 @@
             };
         });
     </script>
+
+    <script src="./CompanyProductsLoader.js"></script>
 </body>
 </html>
