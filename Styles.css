@@ -53,7 +53,7 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Open Sans", sans-serif;
     /* background-color: #f7f7f7; */
     background: rgb(128,0,94);
     background: linear-gradient(90deg, var(--edgeCol) 10%, var(--bgCol) 10%, var(--bgCol) 45%, var(--bgCol) 90%, var(--edgeCol) 90%);
@@ -122,7 +122,7 @@ li:hover {
 
 /* Adding a comic-style icon */
 li::before {
-    content: '\1F4AC'; /* Unicode for a speech balloon icon */
+    content: '\12FB'; /* Unicode for a speech balloon icon */
     font-size: 24px;
     margin-right: 10px;
 }
@@ -219,7 +219,7 @@ nav {
     border: 2px solid #000000;
     border-radius: 5px;
     padding: 10px 15px;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #333333;
     box-shadow: 2px 2px 0 #000000;
