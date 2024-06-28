@@ -9,8 +9,24 @@
     "https://code.jquery.com/jquery-3.6.0.min.js">
     </script>
     
+    <!-- <h1>Website</h1>
+    <nav>
+        <ul class="nav-tabs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav> -->
+
+    <div class = "titleDiv">
+        <p>Website</p>
+    </div>
 </head>
 <body>
+
+    
+
 
     <div class="button-container">
 
@@ -62,11 +78,10 @@
             url: 'https://randomuser.me/api/?inc=name,email,login&noinfo',
             dataType: 'json',
             success: function(data) {
-                console.log(data);
-                console.log(typeof(data));
                 randomizeData(data);
             }
-        });    
+
+            });    
 
         });
         
@@ -100,6 +115,7 @@
                 }
             };
         });
+
     </script>
 
     <script src="./CompanyProductsLoader.js"></script>

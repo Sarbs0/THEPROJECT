@@ -32,8 +32,7 @@ document.getElementById('loadProducts').addEventListener('click', function() {
         url: "https://dummyjson.com/products",
         dataType: 'json',
         success: function(data) {
-            console.log(data);
-            console.log(typeof(data));
+            
             uploadProducts(data);
         }
     });

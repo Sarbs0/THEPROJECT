@@ -1,4 +1,9 @@
 /* CSS */
+:root {
+    --bgCol: rgb(251, 237, 206);
+    --edgeCol: #fed69e;
+}
+
 .button-54 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -51,7 +56,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     /* background-color: #f7f7f7; */
     background: rgb(128,0,94);
-    background: linear-gradient(90deg, rgba(128,0,94,1) 10%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 90%, rgba(128,0,94,1) 90%);
+    background: linear-gradient(90deg, var(--edgeCol) 10%, var(--bgCol) 10%, var(--bgCol) 45%, var(--bgCol) 90%, var(--edgeCol) 90%);
     margin: 0;
     padding: 0;
     display: grid;
@@ -174,4 +179,115 @@ li::before {
     content: '\23'; /* Unicode for a speech balloon icon */
     font-size: 24px;
     margin-right: 10px;
+}
+
+.page-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 4px solid #000000;
+    padding: 20px 0;
+    box-shadow: 0 4px 0 #000000;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333333;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-tabs li {
+    display: inline;
+}
+
+.nav-tabs a {
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    box-shadow: 2px 2px 0 #000000;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.nav-tabs a:hover {
+    box-shadow: 4px 4px 0 #000000;
+    transform: translate(-2px, -2px);
+}
+
+.nav-tabs li {
+    display: inline;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .page-header h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-tabs a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+.titleDiv  {
+    background-color: #ffffff;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 0px 0px 0 #000000;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
+/* Adding some minimalist hover effect */
+.titleDiv div:hover {
+    box-shadow: 6px 6px 0 #000000;
+}   
+
+
+.titleDiv p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    position: relative;
+    user-select: none;
+    margin-right: 100px;
+    margin-left: 100px;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 10px;
 }
