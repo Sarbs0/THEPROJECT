@@ -1,6 +1,3 @@
-
-let statText = document.getElementById('statusText')
-
 function sUpd(tex){
     statText.innerText = "Status: " + tex
 }

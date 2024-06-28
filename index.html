@@ -34,6 +34,7 @@
             <button id="randomizeButton" class="button-54" >Randomize User Information</button>
             <button id="loadProducts" class="button-54" role="button">Load products to sheet</button>
             <button id="clearProducts" class="button-54" role="button">Clear Products</button>
+            <li class = "status" id = "importPrice">Import price total: </li>
             <li class = "status" id = "statusText">Status: </li>
         </ul>
         
@@ -51,6 +52,7 @@
         </li>
     </ul>
     
+
     <iframe class = "spreadsheet-iframe" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2Y3Jyu8wDFjroObj_hXafRtfC--hvG01sMiKe1rL3jAC6ipKVIM-JJQlEc_WoCHDDG3WjD4fqTEXG/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
     <script>
@@ -58,7 +60,6 @@
         let nameEl = document.getElementById('name');
         let emailEl = document.getElementById('email');
         let userEl = document.getElementById('username');
-
         let statText = document.getElementById('statusText')
 
         function randomizeData(data){
@@ -122,5 +123,6 @@
     </script>
 
     <script src="./CompanyProductsLoader.js"></script>
+    <script src="./ImportPrice.js"></script>
 </body>
 </html>
